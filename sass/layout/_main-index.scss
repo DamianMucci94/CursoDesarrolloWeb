@@ -1,0 +1,5 @@
+.MainIndex{
+    @include main(url("../assets/img/Fondo.jpeg"),100%,100rem, center,90% 90%,no-repeat,flex,center);
+    flex-direction: column;
+    justify-content: center;
+}

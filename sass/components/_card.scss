@@ -1,0 +1,88 @@
+#QuienesSomos{
+    @include font(map-get($tamaño,sesenta),"Letra");
+    color: $color-texto;
+    width: 60%;
+    margin-top: map-get($tamaño,cien);
+    padding-top: map-get($tamaño,cincuenta);
+    h2{
+    font-size: 110px;
+    text-align: center;
+    }
+    p{
+    text-align: center;
+    }
+}
+.NuestroProposito{
+@include font(map-get($tamaño,sesenta),"Letra");
+color: $color-texto;
+width: 60%;
+margin: map-get($tamaño,cien);
+    h2{
+    font-size: 110px;
+    text-align: center;
+    }
+    p{
+    text-align: center;
+    }
+}
+
+.Productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: scroll;
+    height: 70%;
+    article{
+        div{
+            display: flex;
+            flex-direction: column;
+            img{
+                @include width_height(19rem,19rem);
+                margin: 2.5rem;
+                border-radius: map-get($tamaño,diez);
+            }
+            .TituloPrenda{
+                @include font(map-get($tamaño, setenta),"Letra");
+                text-align:center;
+                color:$color-texto;
+            }
+            p{
+                font-size: 3.125rem;
+                text-align:center;
+                color:$color-texto;
+            }
+            button{
+                width: 30%;
+                position: relative;
+                left: 130px;
+            }
+        }
+    }
+}
+
+.container-fluid{
+    overflow: scroll;
+    height: 70%;
+    .border{
+        div{
+            img{
+                @include width_height(19rem,19rem);
+                margin: 2.5rem;
+                border-radius: map-get($tamaño,diez);
+            }
+        }
+        .d-flex{
+            .TituloPrenda{
+                color:$color-texto;
+                @include font(map-get($tamaño,sesenta),"Letra");
+            }
+            p{
+                color:$color-texto;
+                font-size: 3.125rem;
+            }
+            button{
+
+            }
+        }
+    }
+}

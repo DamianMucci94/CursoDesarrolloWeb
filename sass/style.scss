@@ -1,0 +1,239 @@
+/**primero siempre las utilites*/
+@import "./utilities/variables";
+@import "./utilities/maps";
+@import "./utilities/mixins";
+
+/*segundo las bases**/
+@import "./base/resets";
+@import "./base/fonts";
+
+/* los layouts**/
+body{
+    background-color:map-get($colores, color1);
+    color: map-get($colores, color2);
+}
+@import "./layout/header";
+@import "./layout/main-index";
+@import "./layout/main-paginasVarias";
+@import "./layout/main-conjuntos";
+@import "./layout/footer";
+
+/**componentes**/
+
+@import "./components/card";
+
+/* mediaquery**/
+
+@media(max-width:1150px){
+header{
+    @include grid_template_columns-rows(repeat(4,1fr),repeat(2,100px));
+        height: 150px;
+        display: grid;
+        grid-template-areas: 
+        "section1 section1 section2 section2"
+        "section1 section1 section3 section3"
+        ;
+        justify-items: center;
+    img{
+        justify-self: flex-end;
+        align-self: flex-start;
+        margin-right: 10px;
+        margin-top: 10px;
+        padding-top: 15px;
+    }
+    h1{
+        position: static;
+        justify-self: flex-start;
+        margin-left: 10px;
+    }
+    nav{
+        ul{
+            display: flex;
+            li{
+                a{
+                }
+            }
+        }
+    }
+    }
+}
+main{
+        padding: 0px;
+    }
+.MainIndex{
+    #QuienesSomos{
+        font-size: 45px;
+        h2{
+        }
+        p{
+        }
+    }
+    .NuestroProposito{
+        font-size: 45px;
+        h2{
+        }
+        p{
+        }
+    }
+}
+
+@media(max-width:875px){
+    .MainIndex{
+        display: grid;
+        @include grid_template_columns-rows(repeat(3,1fr),repeat(6,170px));
+        align-content: center;
+        #QuienesSomos{
+            width: 100%;
+            margin: 0px;
+            display: grid;
+            grid-template-columns: repeat(8,80px);
+            grid-template-rows: repeat(4,100px);
+            justify-content: center;
+            grid-column: 1/4;
+            grid-row: 1/4;
+            h2{
+                grid-column: 3/7;
+                grid-row: 1/2;
+                font-size: 80px;
+            }
+            p{
+                grid-column: 2/8;
+                grid-row: 2/5;
+                font-size: 45px;
+            }
+        }
+        .NuestroProposito{
+            width: 100%;
+            margin: 0px;
+            display: grid;
+            grid-template-columns: repeat(8,80px);
+            grid-template-rows: repeat(4,100px);
+            justify-content: center;
+            grid-column: 1/4;
+            grid-row: 4/7;
+            h2{
+                grid-column: 3/7;
+                grid-row: 1/2;
+                font-size: 80px;
+            }
+            p{
+                grid-column: 2/8;
+                grid-row: 2/5;
+                font-size: 45px;
+            }
+        }
+        }
+    }
+
+
+@media(max-width:570px){
+    header {
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        grid-template-rows: 1fr;
+        img{
+        }
+        h1{
+        }
+        nav{
+            grid-column: 8/9;
+            ul{
+                display: flex;
+                flex-direction: column;
+                font-size: 20px;
+                li{
+                    a{
+                    }
+                }
+            }
+        }
+    }
+    .MainIndex{
+        height: auto;
+        @include grid_template_columns-rows(repeat(3,1fr),repeat(5,1f));
+    
+    #QuienesSomos{
+        grid-column: 1/4;
+        grid-row: 2/4;
+        @include grid_template_columns-rows(repeat(8,80px),repeat(4,50px));
+        h2{
+        font-size: 50px;
+        }
+        p{
+        font-size: 30px;
+        grid-column: 3/7;
+        }
+    }
+    .NuestroProposito {
+        grid-column: 1/4;
+        grid-row: 4/6;
+        @include grid_template_columns-rows(repeat(8,80px),repeat(4,50px));
+        h2{
+        font-size: 50px;
+        }
+        p{
+        font-size: 30px;
+        grid-column: 3/7;
+        }
+    }
+    }
+}
+
+@media(max-width:400px){
+    header {
+        @include grid_template_columns-rows(repeat(12,35px),repeat(2,110px));
+        align-items: flex-end;
+        position: absolute;
+        img{
+            display: none;
+        }
+        h1{
+            grid-column: 3/8;
+            grid-row: 2/3;        }
+        nav{
+            grid-row: 1/2;
+            grid-column: 3/9;
+            ul{
+                display: flex;
+                flex-direction: row;
+                li{
+                    a{
+                    }
+                }
+            }
+        }
+    }
+
+    .MainIndex{
+        padding-top: 0px;
+        background-image: none;
+        height: 60rem;
+    }
+    main{
+        padding-top: 100px;
+        background-image: none;
+        height: 60rem;
+        .container-fluid{
+            .border{
+            /*height: 70%;*/
+            width: 90%;
+                div{
+                    img{
+                        @include width_height(80%,80%);
+                    }
+                }
+                .d-flex{
+                    .TituloPrenda{
+                    }
+                    p{
+                    }
+                    button{
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        font-size: 40px;
+    }
+}

@@ -1,0 +1,8 @@
+footer{
+    @include font(map-get($tamaño,cincuenta),"Letra");
+    background-color: map-get($colores,color1);
+}
+
+footer img{
+    height: map-get($tamaño,cuarenta);
+}

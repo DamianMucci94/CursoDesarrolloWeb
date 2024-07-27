@@ -1,0 +1,36 @@
+header
+{
+    @include flex(flex-start,space-between,fixed);
+    @include width_height(100%,map-get($tamaño, cien));
+    background-color: map-get($colores,color1);
+    img{
+        @include width_height(map-get($tamaño, ochenta),map-get($tamaño,ochenta));
+        border-radius: 10px;
+        margin-left: 10px;
+        grid-area: section1;
+    }
+    h1{
+        @include font(map-get($tamaño, cien),"Marca");
+        text-align:center;
+        font-weight: 100px;
+        position: relative;
+        left: 11rem;
+        bottom: 1rem;
+        grid-area: section2;
+    }
+    nav{
+        ul{
+            @include font(map-get($tamaño, cuarenta),"Letra");
+            list-style: none;
+            grid-area: section3;
+            li{
+                display: inline-block;
+                margin-right: 10px;
+                a{
+                    text-decoration: none;
+                    color: map-get($colores, color3);
+                }
+            }
+        }
+    }
+}
