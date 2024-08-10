@@ -65,6 +65,9 @@ header {
       header nav ul li a {
         text-decoration: none;
         color: black; }
+        header nav ul li a:hover {
+          font-weight: bold;
+          text-shadow: 3px 3px 0 firebrick; }
 
 .MainIndex {
   background-image: url("../assets/img/Fondo.jpeg");
