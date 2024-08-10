@@ -197,9 +197,10 @@ article .d-flex h2{
 }
 
 .Productos article div button{
+    align-self: center;
     width: 30%;
-    position: relative;
-    left: 130px;
+    /*position: relative;
+    left: 130px*/;
 }
 
 footer{

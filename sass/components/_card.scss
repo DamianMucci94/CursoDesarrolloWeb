@@ -31,6 +31,7 @@ margin: map-get($tamaño,cien);
     flex-wrap: wrap;
     justify-content: center;
     overflow: scroll;
+    scrollbar-width: none;
     height: 70%;
     article{
         div{
@@ -52,9 +53,10 @@ margin: map-get($tamaño,cien);
                 color:$color-texto;
             }
             button{
+                align-self: center;
                 width: 30%;
-                position: relative;
-                left: 130px;
+                /*position: relative;
+                left: 130px*/;
             }
         }
     }
@@ -62,6 +64,7 @@ margin: map-get($tamaño,cien);
 
 .container-fluid{
     overflow: scroll;
+    scrollbar-width: none;
     height: 70%;
     .border{
         div{
