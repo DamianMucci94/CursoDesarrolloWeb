@@ -41,7 +41,7 @@ header{
         margin-top: 10px;
         padding-top: 15px;
     }
-    h1{
+    .tracking-in-expand-fwd-top{
         position: static;
         justify-self: flex-start;
         margin-left: 10px;
@@ -133,7 +133,7 @@ main{
         grid-template-rows: repeat(2,85px);
         img{
         }
-        h1{
+        .tracking-in-expand-fwd-top{
         }
         nav{
             grid-row: 2/3;
@@ -189,14 +189,14 @@ main{
         img{
             display: none;
         }
-        h1{
+        .tracking-in-expand-fwd-top{
             grid-column: 3/8;
             grid-row: 2/3;        }
         nav{
             grid-row: 1/2;
             grid-column: 1/10;
             font-size: 20px;
-            padding-left: 100px;
+            padding-left: 150px;
             ul{
                 display: flex;
                 flex-direction: row;
